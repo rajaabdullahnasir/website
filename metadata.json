@@ -1,0 +1,105 @@
+{
+  "title": "iSeeWaves | Cybersecurity & IT Services",
+  "description": "iSeeWaves is a leading cybersecurity and IT services provider, delivering enterprise-grade solutions for resilience, compliance, and scale. Our comprehensive offerings include vulnerability management, penetration testing, audit-ready frameworks, and digital forensics, designed to protect businesses from evolving cyber threats.",
+  "url": "https://iseewaves.pk",
+  "siteName": "ISEEWAVES (PRIVATE) LIMITED",
+  "locale": "en_PK",
+  "type": "website",
+  "keywords": [
+    "iSeeWaves",
+    "Cybersecurity",
+    "IT Services",
+    "myESI",
+    "SBOM",
+    "SSDLC",
+    "Supply Chain Security",
+    "Vulnerability Management",
+    "Penetration Testing",
+    "Cloud Security",
+    "Risk Assessment",
+    "Incident Response",
+    "Security Operations",
+    "Software Supply Chain",
+    "Software Security",
+    "Network Security",
+    "Forensics",
+    "Digital Forensics",
+    "Governance",
+    "Tech Company",
+    "Information Security",
+    "GRC",
+    "Ethical Hacking",
+    "Phishing",
+    "Ransomware",
+    "AI",
+    "Artificial Intelligence",
+    "AI Security",
+    "AI-Driven Security",
+    "Governance, Risk, and Compliance",
+    "Compliance",
+    "Data Protection",
+    "Data Privacy",
+    "Dark Web Monitoring",
+    "Privacy Protection",
+    "Privacy Management",
+    "Compliance Management",
+    "Data Breach Response",
+    "Data Security",
+    "Web Application Security",
+    "Mobile Security",
+    "API Security",
+    "Third-Party Risk Management",
+    "Security Audits"
+  ],
+  "openGraph": {
+    "title": "iSeeWaves | Cybersecurity & IT Services",
+    "description": "iSeeWaves is a leading cybersecurity and IT services provider, delivering enterprise-grade solutions for resilience, compliance, and scale.",
+    "url": "https://iseewaves.pk",
+    "siteName": "ISEEWAVES (PRIVATE) LIMITED",
+    "locale": "en_PK",
+    "type": "website",
+    "images": [
+      {
+        "url": "/images/iSeeWaves.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "iSeeWaves - Cybersecurity & IT Services"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "iSeeWaves | Cybersecurity & IT Services",
+    "description": "iSeeWaves is a leading cybersecurity and IT services provider, delivering enterprise-grade solutions for resilience, compliance, and scale.",
+    "images": ["/images/iSeeWaves.png"]
+  },
+  "robots": {
+    "index": true,
+    "follow": true,
+    "googleBot": {
+      "index": true,
+      "follow": true,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  "authors": [
+    {
+      "name": "ISEEWAVES (PRIVATE) LIMITED",
+      "url": "https://iseewaves.pk"
+    }
+  ],
+  "generator": "iSeeWaves",
+  "referrer": "origin-when-cross-origin",
+  "themeColor": "#0a0f1e",
+  "colorScheme": "dark",
+  "viewport": {
+    "width": "device-width",
+    "initialScale": 1,
+    "maximumScale": 1
+  },
+  "canonical": "https://iseewaves.pk",
+  "alternates": {
+    "canonical": "https://iseewaves.pk"
+  }
+}
