@@ -68,14 +68,14 @@ export default function Product() {
   ];
 
   return (
-    <section id="product" className="py-24 relative overflow-hidden bg-white/5">
+    <section id="product" className="py-24 relative overflow-hidden bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-emerald-500/30 text-emerald-400 text-sm font-medium mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-teal-500/30 text-teal-400 text-sm font-medium mb-6"
           >
             <Shield className="w-4 h-4" />
             <span>Hero Product</span>
@@ -85,7 +85,7 @@ export default function Product() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-4"
+            className="text-4xl md:text-6xl font-bold text-[#0B2545] mb-4"
           >
             MyESI
           </motion.h2>
@@ -94,7 +94,7 @@ export default function Product() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-emerald-400 font-medium tracking-widest uppercase mb-8"
+            className="text-xl text-teal-400 font-medium tracking-widest uppercase mb-8"
           >
             My Enterprise Security Intelligence
           </motion.p>
@@ -103,7 +103,7 @@ export default function Product() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="text-lg text-gray-400 max-w-4xl mx-auto mb-8"
+            className="text-lg text-gray-600 max-w-4xl mx-auto mb-8"
           >
             iSeeWaves has developed MyESI, which secures your code by uncovering hidden vulnerabilities in modules, third-party frameworks, and APIs. It pinpoints risks from outdated versions, misconfigurations, and validates the SSDLC process line-by-line.
           </motion.p>
@@ -116,7 +116,7 @@ export default function Product() {
           >
             <Link 
               to="/demo"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-teal-500 hover:bg-teal-600 text-white font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
             >
               <Play className="w-5 h-5 fill-current" />
               Watch Demo
@@ -126,7 +126,7 @@ export default function Product() {
 
         {/* Why MyESI */}
         <div className="mb-20">
-          <h3 className="text-3xl font-bold text-white mb-10 text-center">Why MyESI?</h3>
+          <h3 className="text-3xl font-bold text-[#0B2545] mb-10 text-center">Why MyESI?</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {problems.map((prob, idx) => (
               <motion.div
@@ -141,7 +141,7 @@ export default function Product() {
                   <AlertTriangle className="w-6 h-6" />
                   <h4 className="font-bold">{prob.title}</h4>
                 </div>
-                <p className="text-gray-300 font-medium">{prob.desc}</p>
+                <p className="text-gray-700 font-medium">{prob.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -149,9 +149,9 @@ export default function Product() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-6 rounded-2xl text-center border-emerald-500/30"
+            className="glass-card p-6 rounded-2xl text-center border-teal-500/30"
           >
-            <p className="text-xl text-emerald-400 font-semibold">
+            <p className="text-xl text-teal-400 font-semibold">
               Just 14% of Organizations have reached a high level of "Security Maturity" where security is fully integrated into the development workflow.
             </p>
           </motion.div>
@@ -159,7 +159,7 @@ export default function Product() {
 
         {/* Real World Attacks */}
         <div className="mb-20">
-          <h3 className="text-3xl font-bold text-white mb-10 text-center">Real World Attacks On Software Supply Chain</h3>
+          <h3 className="text-3xl font-bold text-[#0B2545] mb-10 text-center">Real World Attacks On Software Supply Chain</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {attacks.map((attack, idx) => (
               <motion.div
@@ -168,7 +168,7 @@ export default function Product() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="glass-card rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all group flex flex-col"
+                className="glass-card rounded-2xl overflow-hidden hover:border-teal-500/50 transition-all group flex flex-col"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img 
@@ -178,20 +178,20 @@ export default function Product() {
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#050505] to-transparent opacity-80" />
-                  <span className="absolute bottom-4 right-4 text-xs font-mono text-emerald-400 bg-emerald-400/10 backdrop-blur-md px-3 py-1.5 rounded-full border border-emerald-500/20">
+                  <span className="absolute bottom-4 right-4 text-xs font-mono text-teal-400 bg-teal-400/10 backdrop-blur-md px-3 py-1.5 rounded-full border border-teal-500/20">
                     {attack.year}
                   </span>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-lg font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">{attack.name}</h4>
-                  <p className="text-sm text-gray-400 mb-6 flex-grow leading-relaxed">{attack.desc}</p>
-                  <div className="pt-4 border-t border-white/10 flex justify-between items-center mt-auto">
-                    <span className="text-xs text-gray-500 font-medium">{attack.source}</span>
+                  <h4 className="text-lg font-bold text-[#0B2545] mb-3 group-hover:text-teal-400 transition-colors">{attack.name}</h4>
+                  <p className="text-sm text-gray-600 mb-6 flex-grow leading-relaxed">{attack.desc}</p>
+                  <div className="pt-4 border-t border-gray-200 flex justify-between items-center mt-auto">
+                    <span className="text-xs text-gray-600 font-medium">{attack.source}</span>
                     <a 
                       href={attack.link} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-emerald-400 hover:text-emerald-300 transition-colors"
+                      className="text-teal-400 hover:text-teal-300 transition-colors"
                       title="Read more"
                     >
                       <ExternalLink className="w-4 h-4" />
@@ -205,7 +205,7 @@ export default function Product() {
 
         {/* Primary Purposes */}
         <div>
-          <h3 className="text-3xl font-bold text-white mb-10 text-center">Primary Purposes</h3>
+          <h3 className="text-3xl font-bold text-[#0B2545] mb-10 text-center">Primary Purposes</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {purposes.map((purpose, idx) => (
               <motion.div
@@ -216,13 +216,13 @@ export default function Product() {
                 className="glass-card p-8 rounded-3xl flex gap-6"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                    <purpose.icon className="w-6 h-6 text-emerald-400" />
+                  <div className="w-12 h-12 rounded-full bg-teal-500/20 flex items-center justify-center">
+                    <purpose.icon className="w-6 h-6 text-teal-400" />
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-3">{purpose.title}</h4>
-                  <p className="text-gray-400 leading-relaxed">{purpose.desc}</p>
+                  <h4 className="text-xl font-bold text-[#0B2545] mb-3">{purpose.title}</h4>
+                  <p className="text-gray-600 leading-relaxed">{purpose.desc}</p>
                 </div>
               </motion.div>
             ))}

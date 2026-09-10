@@ -7,3 +7,5 @@ coverage/
 .env*
 !.env.example
 public/Demo/Demo.mp4
+.env
+.env.local

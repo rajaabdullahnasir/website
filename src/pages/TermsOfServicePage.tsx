@@ -9,7 +9,7 @@ export default function TermsOfServicePage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-emerald-500/30 text-emerald-400 text-sm font-medium mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-teal-500/30 text-teal-400 text-sm font-medium mb-6"
           >
             <Shield className="w-4 h-4" />
             <span>Terms of Service</span>
@@ -18,18 +18,18 @@ export default function TermsOfServicePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-6xl font-bold text-[#0B2545] mb-6"
           >
-            Terms of <span className="text-emerald-400">Service</span>
+            Terms of <span className="text-teal-400">Service</span>
           </motion.h1>
-          <p className="text-gray-400">Last updated: February 24, 2026</p>
+          <p className="text-gray-600">Last updated: February 24, 2026</p>
         </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="glass-card p-8 md:p-12 rounded-3xl prose prose-invert prose-emerald max-w-none"
+          className="glass-card p-8 md:p-12 rounded-3xl prose prose-invert prose-teal max-w-none"
         >
           <h2>1. Agreement to Terms</h2>
           <p>

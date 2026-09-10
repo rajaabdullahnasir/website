@@ -45,9 +45,9 @@ export default function AllReportsPage() {
     <div className="min-h-screen pt-32 pb-24 relative z-10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <Link to="/#news" className="inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors">
+          <Link to="/" className="inline-flex items-center gap-2 text-gray-600 hover:text-teal-400 transition-colors">
             <ArrowLeft className="w-4 h-4" />
-            <span>Back to Insights</span>
+            <span>Back to Home</span>
           </Link>
         </div>
 
@@ -55,7 +55,7 @@ export default function AllReportsPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-emerald-500/30 text-emerald-400 text-sm font-medium mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-teal-500/30 text-teal-400 text-sm font-medium mb-6"
           >
             <FileText className="w-4 h-4" />
             <span>Research & Reports</span>
@@ -64,15 +64,15 @@ export default function AllReportsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-6xl font-bold text-[#0B2545] mb-6"
           >
-            All <span className="text-emerald-400">Reports</span>
+            All <span className="text-teal-400">Reports</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-gray-400 max-w-2xl mx-auto"
+            className="text-lg text-gray-600 max-w-2xl mx-auto"
           >
             Browse our full library of whitepapers, research reports, and security guides.
           </motion.p>
@@ -85,19 +85,19 @@ export default function AllReportsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 + 0.3 }}
-              className="glass-card p-6 rounded-2xl group hover:border-emerald-500/50 transition-colors"
+              className="glass-card p-6 rounded-2xl group hover:border-teal-500/50 transition-colors"
             >
               <div className="flex justify-between items-start mb-3">
-                <span className="text-xs font-mono text-emerald-400 bg-emerald-400/10 px-2 py-1 rounded-full">
+                <span className="text-xs font-mono text-teal-400 bg-teal-400/10 px-2 py-1 rounded-full">
                   {report.type}
                 </span>
-                <span className="text-sm text-gray-500">{report.date}</span>
+                <span className="text-sm text-gray-600">{report.date}</span>
               </div>
-              <h4 className="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+              <h4 className="text-xl font-bold text-[#0B2545] mb-2 group-hover:text-teal-400 transition-colors">
                 {report.title}
               </h4>
-              <p className="text-gray-400 mb-4">{report.desc}</p>
-              <a href={report.report} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium text-sm">
+              <p className="text-gray-600 mb-4">{report.desc}</p>
+              <a href={report.report} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 font-medium text-sm">
                 Read Full Report <ExternalLink className="w-4 h-4" />
               </a>
             </motion.div>

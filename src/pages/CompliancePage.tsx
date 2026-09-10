@@ -53,7 +53,7 @@ export default function CompliancePage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-emerald-500/30 text-emerald-400 text-sm font-medium mb-6 ${!showForm && 'mx-auto'}`}
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-teal-500/30 text-teal-400 text-sm font-medium mb-6 ${!showForm && 'mx-auto'}`}
               >
                 <Shield className="w-4 h-4" />
                 <span>Compliance Framework</span>
@@ -63,7 +63,7 @@ export default function CompliancePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-5xl md:text-7xl font-bold text-white mb-6"
+                className="text-5xl md:text-7xl font-bold text-[#0B2545] mb-6"
               >
                 {compliance.title}
               </motion.h1>
@@ -72,13 +72,13 @@ export default function CompliancePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-xl text-gray-300 mb-8"
+                className="text-xl text-gray-700 mb-8"
               >
-                <p className="font-semibold text-emerald-400 mb-2">{compliance.fullName}</p>
-                <p className="text-base text-gray-400">
+                <p className="font-semibold text-teal-400 mb-2">{compliance.fullName}</p>
+                <p className="text-base text-gray-600">
                   Established by <a href={compliance.authorityLink} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline inline-flex items-center gap-1">{compliance.authority} <ExternalLink className="w-3 h-3" /></a> in {compliance.year}.
                 </p>
-                <p className="text-base text-gray-400 mt-2">{compliance.purpose}</p>
+                <p className="text-base text-gray-600 mt-2">{compliance.purpose}</p>
               </motion.div>
 
               <motion.div
@@ -90,14 +90,14 @@ export default function CompliancePage() {
                 {!showForm && (
                   <button
                     onClick={() => setShowForm(true)}
-                    className="flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition-all hover:scale-105"
+                    className="flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-teal-500 text-white font-semibold hover:bg-teal-600 transition-all hover:scale-105"
                   >
                     Free Trial
                   </button>
                 )}
                 <Link
-                  to="/#contact"
-                  className="flex items-center justify-center gap-2 px-8 py-4 rounded-full glass-card text-white font-semibold hover:bg-white/10 transition-all hover:scale-105"
+                  to="/contact"
+                  className="flex items-center justify-center gap-2 px-8 py-4 rounded-full glass-card text-[#0B2545] font-semibold hover:bg-gray-100 transition-all hover:scale-105"
                 >
                   Let's Chat
                 </Link>
@@ -113,40 +113,40 @@ export default function CompliancePage() {
                   exit={{ opacity: 0, x: 50, scale: 0.9 }}
                   className="w-full lg:w-[450px] flex-shrink-0"
                 >
-                  <div className="glass-card p-8 rounded-3xl border-emerald-500/30 relative">
+                  <div className="glass-card p-8 rounded-3xl border-teal-500/30 relative">
                     <button 
                       onClick={() => setShowForm(false)}
-                      className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+                      className="absolute top-4 right-4 text-gray-600 hover:text-[#0B2545] transition-colors"
                     >
                       <X className="w-5 h-5" />
                     </button>
-                    <h3 className="text-2xl font-bold text-white mb-2">Try iSeeWaves Services</h3>
-                    <p className="text-gray-400 text-sm mb-6">Start your free trial today for {compliance.title} compliance.</p>
+                    <h3 className="text-2xl font-bold text-[#0B2545] mb-2">Try iSeeWaves Services</h3>
+                    <p className="text-gray-600 text-sm mb-6">Start your free trial today for {compliance.title} compliance.</p>
                     
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div className="grid grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-sm font-medium text-gray-300 mb-1">First Name *</label>
-                          <input required type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-emerald-500 transition-colors" />
+                          <label className="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+                          <input required type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} className="w-full bg-white border border-gray-200 rounded-lg px-4 py-2 text-[#0B2545] focus:outline-none focus:border-teal-500 transition-colors" />
                         </div>
                         <div>
-                          <label className="block text-sm font-medium text-gray-300 mb-1">Last Name *</label>
-                          <input required type="text" name="lastName" value={formData.lastName} onChange={handleInputChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-emerald-500 transition-colors" />
+                          <label className="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+                          <input required type="text" name="lastName" value={formData.lastName} onChange={handleInputChange} className="w-full bg-white border border-gray-200 rounded-lg px-4 py-2 text-[#0B2545] focus:outline-none focus:border-teal-500 transition-colors" />
                         </div>
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-1">Email Address *</label>
-                        <input required type="email" name="email" value={formData.email} onChange={handleInputChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-emerald-500 transition-colors" />
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                        <input required type="email" name="email" value={formData.email} onChange={handleInputChange} className="w-full bg-white border border-gray-200 rounded-lg px-4 py-2 text-[#0B2545] focus:outline-none focus:border-teal-500 transition-colors" />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-1">Company *</label>
-                        <input required type="text" name="company" value={formData.company} onChange={handleInputChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-emerald-500 transition-colors" />
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Company *</label>
+                        <input required type="text" name="company" value={formData.company} onChange={handleInputChange} className="w-full bg-white border border-gray-200 rounded-lg px-4 py-2 text-[#0B2545] focus:outline-none focus:border-teal-500 transition-colors" />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-1">Location</label>
-                        <input type="text" name="location" value={formData.location} onChange={handleInputChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-emerald-500 transition-colors" />
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
+                        <input type="text" name="location" value={formData.location} onChange={handleInputChange} className="w-full bg-white border border-gray-200 rounded-lg px-4 py-2 text-[#0B2545] focus:outline-none focus:border-teal-500 transition-colors" />
                       </div>
-                      <button type="submit" className="w-full py-3 px-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-lg transition-colors mt-4">
+                      <button type="submit" className="w-full py-3 px-4 bg-teal-500 hover:bg-teal-600 text-white font-bold rounded-lg transition-colors mt-4">
                         Submit Request
                       </button>
                     </form>
@@ -167,35 +167,35 @@ export default function CompliancePage() {
           {/* Definition & Role */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="glass-card p-8 rounded-3xl">
-              <h3 className="text-2xl font-bold text-white mb-4">What is {compliance.title}?</h3>
-              <p className="text-gray-400 leading-relaxed">{compliance.definition}</p>
+              <h3 className="text-2xl font-bold text-[#0B2545] mb-4">What is {compliance.title}?</h3>
+              <p className="text-gray-600 leading-relaxed">{compliance.definition}</p>
             </div>
             <div className="glass-card p-8 rounded-3xl">
-              <h3 className="text-2xl font-bold text-white mb-4">Role & Importance</h3>
-              <p className="text-gray-400 leading-relaxed">{compliance.role}</p>
+              <h3 className="text-2xl font-bold text-[#0B2545] mb-4">Role & Importance</h3>
+              <p className="text-gray-600 leading-relaxed">{compliance.role}</p>
             </div>
           </div>
 
           {/* Benefits & Key Rules */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="glass-card p-8 rounded-3xl border-emerald-500/20">
-              <h3 className="text-2xl font-bold text-white mb-6">Key Benefits</h3>
+            <div className="glass-card p-8 rounded-3xl border-teal-500/20">
+              <h3 className="text-2xl font-bold text-[#0B2545] mb-6">Key Benefits</h3>
               <ul className="space-y-4">
                 {compliance.benefits.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-300">{item}</span>
+                    <CheckCircle className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="glass-card p-8 rounded-3xl border-blue-500/20">
-              <h3 className="text-2xl font-bold text-white mb-6">Key Rules</h3>
+              <h3 className="text-2xl font-bold text-[#0B2545] mb-6">Key Rules</h3>
               <ul className="space-y-4">
                 {compliance.keyRules.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <ArrowRight className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-300">{item}</span>
+                    <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -205,23 +205,23 @@ export default function CompliancePage() {
           {/* Who Must Comply & Requirements */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="glass-card p-8 rounded-3xl">
-              <h3 className="text-2xl font-bold text-white mb-6">Who Must Comply?</h3>
+              <h3 className="text-2xl font-bold text-[#0B2545] mb-6">Who Must Comply?</h3>
               <ul className="space-y-4">
                 {compliance.whoMustComply.map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-gray-500" />
-                    <span className="text-gray-300">{item}</span>
+                    <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="glass-card p-8 rounded-3xl">
-              <h3 className="text-2xl font-bold text-white mb-6">Compliance Requirements</h3>
+              <h3 className="text-2xl font-bold text-[#0B2545] mb-6">Compliance Requirements</h3>
               <ul className="space-y-4">
                 {compliance.requirements.map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-gray-500" />
-                    <span className="text-gray-300">{item}</span>
+                    <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -232,19 +232,19 @@ export default function CompliancePage() {
           <div className="glass-card p-8 rounded-3xl border-red-500/30 bg-red-500/5">
             <div className="flex items-center gap-3 mb-4">
               <AlertTriangle className="w-8 h-8 text-red-400" />
-              <h3 className="text-2xl font-bold text-white">Penalties for Non-Compliance</h3>
+              <h3 className="text-2xl font-bold text-[#0B2545]">Penalties for Non-Compliance</h3>
             </div>
-            <p className="text-gray-300 leading-relaxed">{compliance.penalties}</p>
+            <p className="text-gray-700 leading-relaxed">{compliance.penalties}</p>
           </div>
 
           {/* How iSeeWaves Supports */}
-          <div className="glass-card p-10 rounded-3xl border-emerald-500/40 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full mix-blend-screen filter blur-[50px]" />
-            <h3 className="text-3xl font-bold text-white mb-8 relative z-10">How iSeeWaves Supports {compliance.title} Compliance</h3>
+          <div className="glass-card p-10 rounded-3xl border-teal-500/40 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full mix-blend-screen filter blur-[50px]" />
+            <h3 className="text-3xl font-bold text-[#0B2545] mb-8 relative z-10">How iSeeWaves Supports {compliance.title} Compliance</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
               {compliance.howISeeWavesSupports.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-4 bg-black/20 p-4 rounded-xl">
-                  <Shield className="w-6 h-6 text-emerald-400 flex-shrink-0" />
+                <div key={idx} className="flex items-start gap-4 bg-navy-500/5 p-4 rounded-xl">
+                  <Shield className="w-6 h-6 text-teal-400 flex-shrink-0" />
                   <span className="text-gray-200 font-medium">{item}</span>
                 </div>
               ))}
@@ -253,14 +253,14 @@ export default function CompliancePage() {
 
           {/* CTA */}
           <div className="text-center pt-8">
-            <h3 className="text-3xl font-bold text-white mb-6">Stay Compliant with {compliance.title}</h3>
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">Don't let compliance complexities slow down your business. Partner with iSeeWaves to ensure continuous adherence and robust security.</p>
+            <h3 className="text-3xl font-bold text-[#0B2545] mb-6">Stay Compliant with {compliance.title}</h3>
+            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">Don't let compliance complexities slow down your business. Partner with iSeeWaves to ensure continuous adherence and robust security.</p>
             <button
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 setShowForm(true);
               }}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-teal-500 text-white font-semibold hover:bg-teal-600 transition-all hover:scale-105"
             >
               Start Free Trial Now
             </button>
