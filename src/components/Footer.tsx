@@ -49,7 +49,7 @@ export default function Footer() {
             <h4 className="text-[#0B2545] font-semibold mb-6">Resources</h4>
             <ul className="space-y-4 text-sm text-gray-600">
               <li><Link to="/services" className="hover:text-teal-400 transition-colors">Services</Link></li>
-              <li><Link to="/myesi#support" className="hover:text-teal-400 transition-colors">Technical support</Link></li>
+              <li><Link to="/#support" className="hover:text-teal-400 transition-colors">Technical support</Link></li>
               <li><Link to="/resources/training" className="hover:text-teal-400 transition-colors">Training and certifications</Link></li>
               <li><Link to="/resources/documentation" className="hover:text-teal-400 transition-colors">Product documentation</Link></li>
               <li><Link to="/resources/community" className="hover:text-teal-400 transition-colors">Customer community</Link></li>

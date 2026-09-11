@@ -18,7 +18,7 @@ export default function DemoPage() {
     <div className="min-h-screen pt-32 pb-24 relative z-10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <Link to="/myesi" className="inline-flex items-center gap-2 text-gray-600 hover:text-teal-400 transition-colors">
+          <Link to="/#product" className="inline-flex items-center gap-2 text-gray-600 hover:text-teal-400 transition-colors">
             <ArrowLeft className="w-4 h-4" />
             <span>Back to Product</span>
           </Link>

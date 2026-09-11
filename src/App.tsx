@@ -4,19 +4,19 @@
  */
 
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import ExploreGrid from './components/ExploreGrid';
+import Product from './components/Product';
+import AuditFeatures from './components/AuditFeatures';
+import Packages from './components/Packages';
+import SupportSection from './components/SupportSection';
+import AboutContent from './components/AboutContent';
 import PCATeaser from './components/PCATeaser';
 import TrustedBy from './components/TrustedBy';
 import PartnersSlider from './components/PartnersSlider';
 import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
-import ProductPage from './pages/ProductPage';
-import FeaturesPage from './pages/FeaturesPage';
-import PackagesPage from './pages/PackagesPage';
-import SupportPage from './pages/SupportPage';
 import ContactPage from './pages/ContactPage';
 import PCAPage from './pages/PCAPage';
 import MyesiLoginPage from './pages/MyesiLoginPage';
@@ -66,7 +66,11 @@ function Home() {
   return (
     <>
       <Hero />
-      <ExploreGrid />
+      <Product />
+      <AuditFeatures />
+      <Packages />
+      <SupportSection />
+      <AboutContent />
       <PCATeaser />
       <TrustedBy />
       <PartnersSlider />
@@ -92,10 +96,10 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<AboutPage />} />
-              <Route path="/myesi" element={<ProductPage />} />
-              <Route path="/features" element={<FeaturesPage />} />
-              <Route path="/packages" element={<PackagesPage />} />
-              <Route path="/support" element={<SupportPage />} />
+              <Route path="/myesi" element={<Navigate to="/#product" replace />} />
+              <Route path="/features" element={<Navigate to="/#features" replace />} />
+              <Route path="/packages" element={<Navigate to="/#packages" replace />} />
+              <Route path="/support" element={<Navigate to="/#support" replace />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/pca" element={<PCAPage />} />
               <Route path="/myesi/login" element={<MyesiLoginPage />} />

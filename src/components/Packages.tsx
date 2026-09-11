@@ -98,7 +98,7 @@ export default function Packages() {
                 ))}
               </ul>
               <Link
-                to="/myesi#support"
+                to="/#support"
                 className={`text-center px-6 py-3 rounded-full font-semibold transition-all hover:scale-105 ${
                   pkg.highlight
                     ? 'bg-teal-500 text-white hover:bg-teal-600'

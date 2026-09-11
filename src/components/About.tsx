@@ -39,9 +39,9 @@ export default function About() {
             transition={{ delay: 0.2 }}
             className="text-lg text-gray-600 max-w-3xl mx-auto"
           >
-            Founded by our CEO Abdullah Nasir and built by a team of security engineers, researchers, and developers,
-            we are a Pakistani cybersecurity and AI technology company dedicated to securing digital assets for
-            enterprises, governments, and critical infrastructure worldwide.
+            Founded and built by a team of security engineers, researchers, and developers, we are a Pakistani
+            cybersecurity and AI technology company dedicated to securing digital assets for enterprises,
+            governments, and critical infrastructure worldwide.
           </motion.p>
         </div>
 

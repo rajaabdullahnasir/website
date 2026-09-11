@@ -54,7 +54,7 @@ export default function MyesiLoginPage() {
 
           <p className="text-sm text-gray-600 mt-6 text-center">
             Don't have an account?{' '}
-            <Link to="/myesi#support" className="text-teal-400 hover:underline">Register for a free trial</Link>
+            <Link to="/#support" className="text-teal-400 hover:underline">Register for a free trial</Link>
           </p>
         </motion.div>
       </div>

@@ -14,11 +14,11 @@ const navEntries: NavEntry[] = [
     type: 'menu',
     name: 'Product',
     items: [
-      { name: 'MyESI Overview', href: '/myesi' },
-      { name: '8 Audits', href: '/myesi#features' },
-      { name: 'Packages', href: '/myesi#packages' },
-      { name: 'Free Trial', href: '/myesi#support' },
-      { name: 'Support', href: '/myesi#support' },
+      { name: 'MyESI Overview', href: '/#product' },
+      { name: '8 Audits', href: '/#features' },
+      { name: 'Packages', href: '/#packages' },
+      { name: 'Free Trial', href: '/#support' },
+      { name: 'Support', href: '/#support' },
     ],
   },
   {
@@ -26,7 +26,7 @@ const navEntries: NavEntry[] = [
     name: 'Resources',
     items: [
       { name: 'Services', href: '/services' },
-      { name: 'Technical Support', href: '/myesi#support' },
+      { name: 'Technical Support', href: '/#support' },
       { name: 'Training and Certifications', href: '/resources/training' },
       { name: 'Product Documentation', href: '/resources/documentation' },
       { name: 'Customer Community', href: '/resources/community' },
@@ -158,7 +158,7 @@ export default function Navbar() {
               Log In
             </Link>
             <Link
-              to="/myesi#support"
+              to="/#support"
               className="px-4 py-2 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20 hover:bg-teal-500/20 transition-colors text-sm font-medium"
             >
               Register
@@ -234,7 +234,7 @@ export default function Navbar() {
             )}
             <div className="pt-3 mt-2 border-t border-gray-200 flex flex-col gap-2">
               <Link
-                to="/myesi#support"
+                to="/#support"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block text-center px-4 py-3 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20 text-sm font-medium"
               >
