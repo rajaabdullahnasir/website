@@ -31,7 +31,7 @@ export default function ExecutiveTeamPage() {
         >
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-teal-500/30 to-blue-500/30 flex items-center justify-center shrink-0 border border-gray-200 mx-auto md:mx-0">
-              <img src="/public/images/Founder.jpeg" alt="Founder" className="w-full h-full object-cover rounded-2xl" />
+              <img src="/images/Founder.jpeg" alt="Founder" className="w-full h-full object-cover rounded-2xl" />
             </div>
             <div className="flex-1">
               <h2 className="text-2xl font-bold text-[#0B2545] mb-1">Abdullah Nasir</h2>

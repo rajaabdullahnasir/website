@@ -18,7 +18,12 @@ export default function About() {
     'Building since 2025',
   ];
 
-  const credentials = ['SECP', 'NICAT', 'Ignite', 'MOITT'];
+  const credentials = [
+    { name: 'SECP' },
+    { name: 'NICAT', logo: '/images/nicat.png' },
+    { name: 'Ignite', logo: '/images/ignite-logo.png' },
+    { name: 'MOITT', logo: '/images/moitt-logo.png' },
+  ];
 
   return (
     <section id="about" className="py-24 relative overflow-hidden">
@@ -110,12 +115,17 @@ export default function About() {
             </div>
             <div className="flex flex-wrap items-center gap-x-10 gap-y-6">
               {credentials.map((c) => (
-                <span
-                  key={c}
-                  className="text-xl md:text-2xl font-black text-[#0B2545] tracking-tight grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all"
+                <div
+                  key={c.name}
+                  title={c.name}
+                  className="flex items-center justify-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all"
                 >
-                  {c}
-                </span>
+                  {c.logo ? (
+                    <img src={c.logo} alt={c.name} className="h-10 md:h-12 w-auto object-contain" />
+                  ) : (
+                    <span className="text-xl md:text-2xl font-black text-[#0B2545] tracking-tight">{c.name}</span>
+                  )}
+                </div>
               ))}
             </div>
           </div>

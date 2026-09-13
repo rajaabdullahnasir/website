@@ -42,7 +42,7 @@ export default function AboutContent() {
           >
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="w-28 h-28 rounded-2xl bg-gradient-to-br from-teal-400/30 to-[#00C08B]/30 flex items-center justify-center shrink-0 border border-gray-200 mx-auto md:mx-0">
-                <img src="/public/images/Founder.jpeg" alt="Founder" className="w-full h-full object-cover rounded-2xl" />
+                <img src="/images/Founder.jpeg" alt="Founder" className="w-full h-full object-cover rounded-2xl" />
               </div>
               <div className="flex-1">
                 <div className="relative">

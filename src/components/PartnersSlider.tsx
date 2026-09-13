@@ -1,18 +1,18 @@
 import { motion } from 'motion/react';
 
 const partners = [
-  { name: 'International Islamic University Islamabad', logo: '/public/images/IIUI-logos-2.jpg' },
-  { name: 'Pakistan Cybersecurity Alliance', logo: '/public/images/pca.png' },
-  { name: 'P@SHA Startup Hub.', logo: '/public/images/pasha-startup-hub.png' },
-  { name: 'National Incubation Center for Aerospace Technologies', logo: '/public/images/nicat.png' },
-  { name: 'Ignite National Technology Fund', logo: '/public/images/ignite-logo.png' },
-  { name: 'Chamber of Commerce & Industry, Islamabad', logo: '/public/images/icci.png' },
-  { name: 'HerVoice', logo: '/public/images/HerVoice.png' },
-  { name: 'Sahiba Writing Squad - SWS', logo: '/public/images/SWS.jpg' },
-  { name: 'Nas Fist Solutions (Private) Limited', logo: '/public/images/nas.png' },
-  { name: 'TMUC Abbottabad', logo: '/public/images/TMUC-logo.png' },
-  { name: 'National Youth Leadership Programme (NYLP)', logo: '/public/images/nylp.png' },
-  { name: 'Empowerise Her', logo: '/public/images/Empowerise-Her.png' },
+  { name: 'International Islamic University Islamabad', logo: '/images/IIUI-logos-2.jpg' },
+  { name: 'Pakistan Cybersecurity Alliance', logo: '/images/PCA.png' },
+  { name: 'P@SHA Startup Hub', logo: '/images/pasha-startup-hub.png' },
+  { name: 'National Incubation Center for Aerospace Technologies', logo: '/images/nicat.png' },
+  { name: 'Ignite National Technology Fund', logo: '/images/ignite-logo.png' },
+  { name: 'Chamber of Commerce & Industry, Islamabad', logo: '/images/icci.png' },
+  { name: 'HerVoice', logo: '/images/HerVoice.png' },
+  { name: 'Sahiba Writing Squad - SWS', logo: '/images/SWS.jpg' },
+  { name: 'Nas Fist Solutions (Private) Limited', logo: '/images/nas.png' },
+  { name: 'TMUC Abbottabad', logo: '/images/TMUC-logo.png' },
+  { name: 'National Youth Leadership Programme (NYLP)', logo: '/images/nylp.png' },
+  { name: 'Empowerise Her', logo: '/images/Empowerise-Her.png' },
 ];
 
 const loopPartners = [...partners, ...partners];
@@ -32,15 +32,16 @@ export default function PartnersSlider() {
       </div>
 
       <div className="relative w-full">
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#F6F8FB] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#F6F8FB] to-transparent z-10 pointer-events-none" />
         <div className="partner-marquee-track flex items-center gap-6 w-max">
-          {loopPartners.map((name, idx) => (
+          {loopPartners.map((partner, idx) => (
             <div
-              key={`${name}-${idx}`}
-              className="glass-card rounded-xl border border-gray-200 px-8 py-5 flex items-center justify-center shrink-0 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all"
+              key={`${partner.name}-${idx}`}
+              title={partner.name}
+              className="glass-card rounded-xl border border-gray-200 px-8 py-5 flex items-center justify-center shrink-0 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all h-20 w-40"
             >
-              <span className="text-[#0B2545] font-semibold whitespace-nowrap text-sm md:text-base">{name}</span>
+              <img src={partner.logo} alt={partner.name} className="max-h-12 max-w-full object-contain" />
             </div>
           ))}
         </div>

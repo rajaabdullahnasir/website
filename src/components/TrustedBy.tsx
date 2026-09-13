@@ -1,13 +1,13 @@
 import { motion } from 'motion/react';
 
 const trustedBy = [
-  { short: 'MOITT', full: 'Ministry of IT & Telecom', logo: '/public/images/moitt-logo.png' },
-  { short: 'Ignite', full: 'Ignite National Technology Fund', logo: '/public/images/ignite-logo.png' },
-  { short: 'NICAT', full: 'National Incubation Center for Aerospace Technologies', logo: '/public/images/nicat.png' },
-  { short: 'NACK', full: 'NACK', logo: '/public/images/nack.png' },
-  { short: 'NCERT', full: 'National CERT', logo: '/public/images/ncert.png' },
-  { short: 'IIUI', full: 'International Islamic University Islamabad', logo: '/public/images/IIUI-logos-2.jpg' },
-  { short: 'P@SHA', full: 'P@SHA Startup Hub.', logo: '/public/images/pasha-startup-hub.png' },
+  { short: 'MOITT', full: 'Ministry of IT & Telecom', logo: '/images/moitt-logo.png' },
+  { short: 'Ignite', full: 'Ignite National Technology Fund', logo: '/images/ignite-logo.png' },
+  { short: 'NICAT', full: 'National Incubation Center for Aerospace Technologies', logo: '/images/nicat.png' },
+  { short: 'NACK', full: 'NACK', logo: '/images/nack.png' },
+  { short: 'NCERT', full: 'National CERT', logo: '/images/ncert.png' },
+  { short: 'IIUI', full: 'International Islamic University Islamabad', logo: '/images/IIUI-logos-2.jpg' },
+  { short: 'P@SHA', full: 'P@SHA Startup Hub.', logo: '/images/pasha-startup-hub.png' },
 ];
 
 export default function TrustedBy() {
