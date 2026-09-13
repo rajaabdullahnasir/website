@@ -95,8 +95,8 @@ export default function PCAPage() {
 
         {/* Logo + Header */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-14">
-          <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-teal-500 to-[#00C08B] flex items-center justify-center mx-auto mb-6 shadow-lg">
-            <span className="text-white font-black text-2xl tracking-tight">PCA</span>
+          <div className="w-60 h-60  flex items-center justify-center mx-auto ">
+            <img src="/public/images/PCA.png" alt="PCA Logo" className="w-60 h-60 object-contain" />
           </div>
           <span className="text-teal-500 text-sm font-bold tracking-widest uppercase">Community Initiative</span>
           <h1 className="text-4xl md:text-6xl font-bold text-[#0B2545] mt-4 mb-6">

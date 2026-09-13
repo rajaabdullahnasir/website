@@ -1,12 +1,13 @@
 import { motion } from 'motion/react';
 
 const trustedBy = [
-  { short: 'MOITT', full: 'Ministry of IT & Telecom' },
-  { short: 'Ignite', full: 'Ignite National Technology Fund' },
-  { short: 'NICAT', full: 'National Incubation Center' },
-  { short: 'NACK', full: 'NACK' },
-  { short: 'NCERT', full: 'National CERT' },
-  { short: 'IIUI', full: 'International Islamic University Islamabad' },
+  { short: 'MOITT', full: 'Ministry of IT & Telecom', logo: '/public/images/moitt-logo.png' },
+  { short: 'Ignite', full: 'Ignite National Technology Fund', logo: '/public/images/ignite-logo.png' },
+  { short: 'NICAT', full: 'National Incubation Center for Aerospace Technologies', logo: '/public/images/nicat.png' },
+  { short: 'NACK', full: 'NACK', logo: '/public/images/nack.png' },
+  { short: 'NCERT', full: 'National CERT', logo: '/public/images/ncert.png' },
+  { short: 'IIUI', full: 'International Islamic University Islamabad', logo: '/public/images/IIUI-logos-2.jpg' },
+  { short: 'P@SHA', full: 'P@SHA Startup Hub.', logo: '/public/images/pasha-startup-hub.png' },
 ];
 
 export default function TrustedBy() {
@@ -32,6 +33,7 @@ export default function TrustedBy() {
               className="flex flex-col items-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
               title={org.full}
             >
+              <img src={org.logo} alt={org.full} className="h-16 w-auto object-contain" />
               <span className="text-2xl md:text-3xl font-black text-[#0B2545] tracking-tight">{org.short}</span>
             </motion.div>
           ))}

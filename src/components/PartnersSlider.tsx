@@ -1,12 +1,18 @@
 import { motion } from 'motion/react';
 
 const partners = [
-  'Omnitell Tech Pakistan',
-  'The Vision Bridge',
-  'Pakistan Cybersecurity Alliance',
-  'P@SHA',
-  'NICAT',
-  'Ignite National Technology Fund',
+  { name: 'International Islamic University Islamabad', logo: '/public/images/IIUI-logos-2.jpg' },
+  { name: 'Pakistan Cybersecurity Alliance', logo: '/public/images/pca.png' },
+  { name: 'P@SHA Startup Hub.', logo: '/public/images/pasha-startup-hub.png' },
+  { name: 'National Incubation Center for Aerospace Technologies', logo: '/public/images/nicat.png' },
+  { name: 'Ignite National Technology Fund', logo: '/public/images/ignite-logo.png' },
+  { name: 'Chamber of Commerce & Industry, Islamabad', logo: '/public/images/icci.png' },
+  { name: 'HerVoice', logo: '/public/images/HerVoice.png' },
+  { name: 'Sahiba Writing Squad - SWS', logo: '/public/images/SWS.jpg' },
+  { name: 'Nas Fist Solutions (Private) Limited', logo: '/public/images/nas.png' },
+  { name: 'TMUC Abbottabad', logo: '/public/images/TMUC-logo.png' },
+  { name: 'National Youth Leadership Programme (NYLP)', logo: '/public/images/nylp.png' },
+  { name: 'Empowerise Her', logo: '/public/images/Empowerise-Her.png' },
 ];
 
 const loopPartners = [...partners, ...partners];
