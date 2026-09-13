@@ -19,10 +19,11 @@ export default function About() {
   ];
 
   const credentials = [
-    { name: 'SECP' },
+    { name: 'SECP', logo: '/images/secp-logo.png' },
     { name: 'NICAT', logo: '/images/nicat.png' },
     { name: 'Ignite', logo: '/images/ignite-logo.png' },
     { name: 'MOITT', logo: '/images/moitt-logo.png' },
+    { name: 'PSEB', logo: '/images/pseb.png' },
   ];
 
   return (

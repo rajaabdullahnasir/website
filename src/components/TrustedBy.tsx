@@ -2,12 +2,13 @@ import { motion } from 'motion/react';
 
 const trustedBy = [
   { short: 'MOITT', full: 'Ministry of IT & Telecom', logo: '/images/moitt-logo.png' },
-  { short: 'Ignite', full: 'Ignite National Technology Fund', logo: '/images/ignite-logo.png' },
-  { short: 'NICAT', full: 'National Incubation Center for Aerospace Technologies', logo: '/images/nicat.png' },
-  { short: 'NACK', full: 'NACK', logo: '/images/nack.png' },
+  { short: 'Ignite', full: 'Ignite National Technology Fund', logo: '/images/ignite-logo.png', large: true },
+  { short: 'NICAT', full: 'National Incubation Center for Aerospace Technologies', logo: '/images/nicat.png', large: true },
+  { short: 'NACK', full: 'NACK', logo: '/images/nack.png', large: true },
   { short: 'NCERT', full: 'National CERT', logo: '/images/ncert.png' },
   { short: 'IIUI', full: 'International Islamic University Islamabad', logo: '/images/IIUI-logos-2.jpg' },
   { short: 'P@SHA', full: 'P@SHA Startup Hub.', logo: '/images/pasha-startup-hub.png' },
+  { short: 'PSEB', full: 'Pakistan Software Export Board', logo: '/images/pseb.png' },
 ];
 
 export default function TrustedBy() {
@@ -30,11 +31,10 @@ export default function TrustedBy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
-              className="flex flex-col items-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+              className="flex items-center justify-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
               title={org.full}
             >
-              <img src={org.logo} alt={org.full} className="h-16 w-auto object-contain" />
-              <span className="text-2xl md:text-3xl font-black text-[#0B2545] tracking-tight">{org.short}</span>
+              <img src={org.logo} alt={org.full} className={org.large ? 'h-24 w-auto object-contain' : 'h-16 w-auto object-contain'} />
             </motion.div>
           ))}
         </div>

@@ -1,4 +1,4 @@
-import { Shield, Linkedin, Twitter, Facebook, Instagram, ChevronDown, ChevronUp, MapPin, Mail } from 'lucide-react';
+import { Linkedin, Twitter, Facebook, Instagram, ChevronDown, ChevronUp, MapPin, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { complianceData } from '../data/complianceData';
@@ -12,8 +12,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
-            <Shield className="w-8 h-8 text-teal-400" />
-            <span className="text-2xl font-bold tracking-tight text-[#0B2545]">iSeeWaves</span>
+            <img src="/images/iSeeWaves.png" alt="iSeeWaves" className="h-8 w-auto" />
           </div>
           <p className="text-gray-600 max-w-md leading-relaxed mb-6">
             Makers of MyESI, an automated software supply chain security and DevSecOps platform.

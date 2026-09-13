@@ -1,0 +1,18 @@
+# This file tells Apache to send every request to index.html, so React Router
+# can handle the URL itself. Without this, visiting a page directly (e.g.
+# yoursite.com/about) or refreshing while on one shows a 404, because there is
+# no real "about" file on the server - only index.html, which loads the app
+# that then reads the URL and shows the right page.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # If the request is for a real file or folder that exists, serve it directly
+  # (this lets actual assets like /images/logo.png and /assets/app.js through)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Otherwise, hand it to index.html and let React Router take over
+  RewriteRule . /index.html [L]
+</IfModule>
