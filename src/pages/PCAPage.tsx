@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import {
   ArrowLeft,
   Users,
@@ -115,6 +116,10 @@ const episodes: Episode[] = [
 ];
 
 export default function PCAPage() {
+  useDocumentTitle(
+    'Pakistan Cybersecurity Alliance | iSeeWaves',
+    'Learn about the Pakistan Cybersecurity Alliance (PCA), its community platform, Threat Horizons Pakistan events, and outreach initiatives.'
+  );
   const [lightboxImg, setLightboxImg] = useState<string | null>(null);
 
   return (
@@ -130,7 +135,7 @@ export default function PCAPage() {
         {/* Logo + Header */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-14">
           <div className="w-40 h-40 flex items-center justify-center mx-auto mb-2">
-            <img src="/images/PCA.png" alt="PCA Logo" className="w-full h-full object-contain" />
+            <img src="/images/PCA.png" alt="Pakistan Cybersecurity Alliance logo" className="w-full h-full object-contain" />
           </div>
           <span className="text-teal-500 text-sm font-bold tracking-widest uppercase">Community Initiative</span>
           <h1 className="text-4xl md:text-6xl font-bold text-[#0B2545] mt-4 mb-6">
@@ -296,7 +301,7 @@ export default function PCAPage() {
                         onClick={() => setLightboxImg(img)}
                         className="aspect-square rounded-lg overflow-hidden border border-gray-200 hover:opacity-80 transition-opacity"
                       >
-                        <img src={img} alt="Event" className="w-full h-full object-cover" loading="lazy" />
+                        <img src={img} alt={`Photo from ${ep.title}`} className="w-full h-full object-cover" loading="lazy" />
                       </button>
                     ))}
                   </div>
@@ -364,7 +369,7 @@ export default function PCAPage() {
             >
               <X className="w-5 h-5" />
             </button>
-            <img src={lightboxImg} alt="Event" className="max-w-full max-h-full rounded-lg object-contain" />
+            <img src={lightboxImg} alt="Enlarged PCA event photo" className="max-w-full max-h-full rounded-lg object-contain" />
           </motion.div>
         )}
       </AnimatePresence>
@@ -381,3 +386,4 @@ export default function PCAPage() {
     </div>
   );
 }
+

@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { FileText, ExternalLink, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const reports = [
   {
@@ -41,6 +42,10 @@ const reports = [
 ];
 
 export default function AllReportsPage() {
+  useDocumentTitle(
+    'Security Reports & Briefings | iSeeWaves',
+    'Browse iSeeWaves threat briefings and research reports on emerging cybersecurity risks.'
+  );
   return (
     <div className="min-h-screen pt-32 pb-24 relative z-10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,3 +112,4 @@ export default function AllReportsPage() {
     </div>
   );
 }
+

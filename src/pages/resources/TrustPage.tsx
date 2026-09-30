@@ -1,7 +1,12 @@
 import { ShieldCheck } from 'lucide-react';
 import SimplePage from '../SimplePage';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function TrustPage() {
+  useDocumentTitle(
+    'myESI Trust | iSeeWaves',
+    'How iSeeWaves secures the myESI platform that secures your software supply chain.'
+  );
   return (
     <SimplePage
       eyebrow="Resources"
@@ -18,3 +23,4 @@ export default function TrustPage() {
     />
   );
 }
+

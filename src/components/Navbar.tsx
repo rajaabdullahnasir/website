@@ -109,7 +109,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/images/iSeeWaves.png" alt="iSeeWaves" className="md:h-8 w-auto" />
+            <img src="/images/iSeeWaves.png" alt="iSeeWaves logo" className="md:h-8 w-auto" />
           </Link>
 
           {/* Desktop Nav */}
@@ -254,3 +254,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

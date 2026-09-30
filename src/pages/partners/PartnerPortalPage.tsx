@@ -3,8 +3,13 @@ import { ArrowLeft, LayoutDashboard, Loader2, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useSubmitForm } from '../../hooks/useSubmitForm';
 import FormToast from '../../components/FormToast';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function PartnerPortalPage() {
+  useDocumentTitle(
+    'Partner Portal | iSeeWaves',
+    'Request access to the iSeeWaves partner portal for deal registration, resources, and support.'
+  );
   const { status, handleSubmit } = useSubmitForm({ subject: 'Partner Portal Access Request' });
 
   return (
@@ -36,6 +41,7 @@ export default function PartnerPortalPage() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
+              <input type="text" name="website_hp" style={{ position: 'absolute', left: '-9999px', opacity: 0 }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Partner Email</label>
                 <input required name="email" type="email" className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-[#0B2545] focus:outline-none focus:border-teal-500" />
@@ -61,3 +67,4 @@ export default function PartnerPortalPage() {
     </div>
   );
 }
+

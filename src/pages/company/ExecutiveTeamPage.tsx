@@ -1,8 +1,13 @@
 import { motion } from 'motion/react';
 import { ArrowLeft, Quote, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function ExecutiveTeamPage() {
+  useDocumentTitle(
+    'Executive Team | iSeeWaves',
+    'Meet the executive team leading iSeeWaves\' cybersecurity and AI company.'
+  );
   return (
     <div className="min-h-screen pt-32 pb-24 relative z-10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,7 +36,7 @@ export default function ExecutiveTeamPage() {
         >
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-teal-500/30 to-blue-500/30 flex items-center justify-center shrink-0 border border-gray-200 mx-auto md:mx-0">
-              <img src="/images/Founder.jpeg" alt="Founder" className="w-full h-full object-cover rounded-2xl" />
+              <img src="/images/Founder.jpeg" alt="Portrait of the iSeeWaves Founder and CEO" className="w-full h-full object-cover rounded-2xl" />
             </div>
             <div className="flex-1">
               <h2 className="text-2xl font-bold text-[#0B2545] mb-1">Abdullah Nasir</h2>
@@ -106,3 +111,4 @@ export default function ExecutiveTeamPage() {
     </div>
   );
 }
+

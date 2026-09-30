@@ -1,7 +1,12 @@
 import { motion } from 'motion/react';
 import { Shield } from 'lucide-react';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 export default function LegalPage() {
+  useDocumentTitle(
+    'Legal Notice | iSeeWaves',
+    'Legal and company registration information for iSeeWaves (Private) Limited.'
+  );
   return (
     <div className="min-h-screen pt-32 pb-24 relative z-10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,15 +42,15 @@ export default function LegalPage() {
           
           <h3>Registered Office</h3>
           <p>
-            123 Security Boulevard<br />
-            Cyber City, CC 10101<br />
-            United States
+            Shop # 10, Plot # 237,<br />
+            Banda Phugwarian, Banda Batng<br />
+            Abbottabad, Khyber Pakhtunkhwa, Pakistan<br />
           </p>
 
           <h3>Contact Details</h3>
           <p>
-            Email: legal@iseewaves.com<br />
-            Phone: +1 (555) 012-3456
+            Email: team@iseewaves.pk<br />
+            Phone: +92 314 1966547
           </p>
 
           <h2>Intellectual Property</h2>
@@ -62,3 +67,4 @@ export default function LegalPage() {
     </div>
   );
 }
+

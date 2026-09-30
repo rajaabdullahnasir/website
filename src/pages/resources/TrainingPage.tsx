@@ -2,8 +2,13 @@ import { motion } from 'motion/react';
 import { GraduationCap, ArrowLeft, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { trainingData } from '../../data/trainingData';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function TrainingPage() {
+  useDocumentTitle(
+    'Security Training Programs | iSeeWaves',
+    'Browse iSeeWaves cybersecurity training programs, from phishing awareness to ethical hacking and digital forensics.'
+  );
   return (
     <div className="min-h-screen pt-32 pb-24 relative z-10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,3 +58,4 @@ export default function TrainingPage() {
     </div>
   );
 }
+

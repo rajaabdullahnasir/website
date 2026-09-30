@@ -1,7 +1,12 @@
 import { Layers } from 'lucide-react';
 import SimplePage from '../SimplePage';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function PartnerProgramsPage() {
+  useDocumentTitle(
+    'Partner Programs | iSeeWaves',
+    'Compare iSeeWaves partner tracks: referral, reseller, and implementation partner programs.'
+  );
   return (
     <SimplePage
       eyebrow="Partners"
@@ -20,3 +25,4 @@ export default function PartnerProgramsPage() {
     />
   );
 }
+

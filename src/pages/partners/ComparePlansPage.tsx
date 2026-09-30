@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowLeft, Check, Minus } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 const rows = [
   { label: 'Deal registration', referral: false, reseller: true, implementation: true },
@@ -20,6 +21,10 @@ const plans = [
 ];
 
 export default function ComparePlansPage() {
+  useDocumentTitle(
+    'Compare Partner Plans | iSeeWaves',
+    'Compare iSeeWaves referral, reseller, and implementation partner plans side by side.'
+  );
   return (
     <div className="min-h-screen pt-32 pb-24 relative z-10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,3 +87,4 @@ export default function ComparePlansPage() {
     </div>
   );
 }
+

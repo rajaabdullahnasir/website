@@ -3,10 +3,17 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Shield, ArrowRight, CheckCircle, AlertTriangle, ExternalLink, X } from 'lucide-react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { complianceData } from '../data/complianceData';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 export default function CompliancePage() {
   const { id } = useParams<{ id: string }>();
   const compliance = complianceData.find(c => c.id === id);
+
+  useDocumentTitle(
+    compliance ? `${compliance.title} Compliance | iSeeWaves` : 'Compliance | iSeeWaves',
+    compliance ? compliance.purpose : 'Explore iSeeWaves compliance and regulatory support services.'
+  );
+
   const [showForm, setShowForm] = useState(false);
   
   const [formData, setFormData] = useState({
@@ -28,6 +35,9 @@ export default function CompliancePage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const form = e.currentTarget as HTMLFormElement;
+    const honeypot = (form.elements.namedItem('website_hp') as HTMLInputElement | null)?.value;
+    if (honeypot) return;
     const subject = encodeURIComponent(`Free Trial Request for ${compliance.title}`);
     const body = encodeURIComponent(
       `Name: ${formData.firstName} ${formData.lastName}\n` +
@@ -124,6 +134,7 @@ export default function CompliancePage() {
                     <p className="text-gray-600 text-sm mb-6">Start your free trial today for {compliance.title} compliance.</p>
                     
                     <form onSubmit={handleSubmit} className="space-y-4">
+                      <input type="text" name="website_hp" style={{ position: 'absolute', left: '-9999px', opacity: 0 }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
                       <div className="grid grid-cols-2 gap-4">
                         <div>
                           <label className="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
@@ -271,3 +282,4 @@ export default function CompliancePage() {
     </div>
   );
 }
+

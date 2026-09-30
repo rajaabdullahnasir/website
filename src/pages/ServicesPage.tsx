@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ShieldAlert, ShieldCheck, FileCheck, Cloud, UserCog, ArrowLeft, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const categoryMeta: Record<string, { icon: any; color: string; bg: string; border: string }> = {
   'Offensive Security': { icon: ShieldAlert, color: 'text-red-400', bg: 'bg-red-400/10', border: 'border-red-400/20' },
@@ -12,6 +13,10 @@ const categoryMeta: Record<string, { icon: any; color: string; bg: string; borde
 };
 
 export default function ServicesPage() {
+  useDocumentTitle(
+    'Cybersecurity Services | iSeeWaves',
+    'Explore iSeeWaves\' full range of cybersecurity services, including offensive security, defensive security, compliance & GRC, and cloud & AI security.'
+  );
   const categories = Array.from(new Set(servicesData.map((s) => s.category)));
 
   return (
@@ -94,3 +99,4 @@ export default function ServicesPage() {
     </div>
   );
 }
+

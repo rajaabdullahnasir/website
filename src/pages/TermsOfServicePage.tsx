@@ -1,7 +1,12 @@
 import { motion } from 'motion/react';
 import { Shield } from 'lucide-react';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 export default function TermsOfServicePage() {
+  useDocumentTitle(
+    'Terms of Service | iSeeWaves',
+    'Read the terms of service governing your use of iSeeWaves products, services, and website.'
+  );
   return (
     <div className="min-h-screen pt-32 pb-24 relative z-10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,3 +87,4 @@ export default function TermsOfServicePage() {
     </div>
   );
 }
+

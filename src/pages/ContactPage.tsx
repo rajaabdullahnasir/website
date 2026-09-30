@@ -1,8 +1,13 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactHiring from '../components/ContactHiring';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 export default function ContactPage() {
+  useDocumentTitle(
+    'Contact Us | iSeeWaves',
+    'Get in touch with iSeeWaves for cybersecurity services, partnership inquiries, or general questions.'
+  );
   return (
     <div className="pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
@@ -15,3 +20,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

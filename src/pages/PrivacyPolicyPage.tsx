@@ -1,7 +1,12 @@
 import { motion } from 'motion/react';
 import { Shield } from 'lucide-react';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 export default function PrivacyPolicyPage() {
+  useDocumentTitle(
+    'Privacy Policy | iSeeWaves',
+    'Read the iSeeWaves privacy policy to understand how we collect, use, and protect your information.'
+  );
   return (
     <div className="min-h-screen pt-32 pb-24 relative z-10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,3 +102,4 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
+

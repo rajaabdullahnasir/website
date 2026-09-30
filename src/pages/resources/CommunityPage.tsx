@@ -1,7 +1,12 @@
 import { Users } from 'lucide-react';
 import SimplePage from '../SimplePage';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function CommunityPage() {
+  useDocumentTitle(
+    'Customer Community | iSeeWaves',
+    'Connect with other myESI customers, share best practices, and shape the product roadmap.'
+  );
   return (
     <SimplePage
       eyebrow="Resources"
@@ -17,3 +22,4 @@ export default function CommunityPage() {
     />
   );
 }
+

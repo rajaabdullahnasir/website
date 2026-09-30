@@ -1,7 +1,12 @@
 import { Search } from 'lucide-react';
 import SimplePage from '../SimplePage';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function FindPartnerPage() {
+  useDocumentTitle(
+    'Find a Partner | iSeeWaves',
+    'Find a certified iSeeWaves partner in your region to deploy and manage myESI.'
+  );
   return (
     <SimplePage
       eyebrow="Partners"
@@ -19,3 +24,4 @@ export default function FindPartnerPage() {
     />
   );
 }
+

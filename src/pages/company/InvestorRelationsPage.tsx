@@ -3,8 +3,13 @@ import { ArrowLeft, TrendingUp, Target, Building2, Rocket, ShieldCheck, Send, Lo
 import { Link } from 'react-router-dom';
 import { useSubmitForm } from '../../hooks/useSubmitForm';
 import FormToast from '../../components/FormToast';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function InvestorRelationsPage() {
+  useDocumentTitle(
+    'Investor Relations | iSeeWaves',
+    'Investor relations information for iSeeWaves, a NICAT-incubated cybersecurity and AI company.'
+  );
   const { status, handleSubmit } = useSubmitForm({ subject: 'Investor Relations Inquiry' });
 
   const highlights = [
@@ -142,6 +147,7 @@ export default function InvestorRelationsPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  <input type="text" name="website_hp" style={{ position: 'absolute', left: '-9999px', opacity: 0 }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
                   <div>
                     <label className="block text-xs font-medium text-gray-600 mb-1.5">Full Name</label>
                     <input required name="name" type="text" className="w-full px-3 py-2.5 text-sm rounded-lg bg-white border border-gray-200 text-[#0B2545] focus:outline-none focus:border-teal-500" />
@@ -176,3 +182,4 @@ export default function InvestorRelationsPage() {
     </div>
   );
 }
+

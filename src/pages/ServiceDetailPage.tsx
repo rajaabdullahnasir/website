@@ -4,12 +4,18 @@ import { Link, useParams, Navigate } from 'react-router-dom';
 import { getServiceBySlug } from '../data/servicesData';
 import { useSubmitForm } from '../hooks/useSubmitForm';
 import FormToast from '../components/FormToast';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 export default function ServiceDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const service = slug ? getServiceBySlug(slug) : undefined;
   const { status, handleSubmit } = useSubmitForm(
     service ? { subject: `Service Request: ${service.title}`, service: service.title } : undefined
+  );
+
+  useDocumentTitle(
+    service ? `${service.title} | iSeeWaves` : 'Service | iSeeWaves',
+    service ? service.description : 'Explore iSeeWaves cybersecurity services.'
   );
 
   if (!service) {
@@ -72,6 +78,7 @@ export default function ServiceDetailPage() {
                 onSubmit={handleSubmit}
                 className="space-y-4"
               >
+                <input type="text" name="website_hp" style={{ position: 'absolute', left: '-9999px', opacity: 0 }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
                 <div>
                   <label className="block text-xs font-medium text-gray-600 mb-1.5">Full Name</label>
                   <input required name="name" type="text" className="w-full px-3 py-2.5 text-sm rounded-lg bg-white border border-gray-200 text-[#0B2545] focus:outline-none focus:border-teal-500" />
@@ -117,3 +124,4 @@ export default function ServiceDetailPage() {
     </div>
   );
 }
+

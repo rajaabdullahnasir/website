@@ -16,6 +16,7 @@ import PCATeaser from './components/PCATeaser';
 import TrustedBy from './components/TrustedBy';
 import PartnersSlider from './components/PartnersSlider';
 import Footer from './components/Footer';
+import CookieConsent from './components/CookieConsent';
 
 // Every page below is loaded on demand (code-split) instead of all at once,
 // so visiting the homepage doesn't download the code for every other page
@@ -46,6 +47,7 @@ const CareersPage = lazy(() => import('./pages/CareersPage'));
 const ServiceDetailPage = lazy(() => import('./pages/ServiceDetailPage'));
 const TrainingDetailPage = lazy(() => import('./pages/TrainingDetailPage'));
 const ComparePlansPage = lazy(() => import('./pages/partners/ComparePlansPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 function PageLoader() {
   return (
@@ -138,12 +140,15 @@ export default function App() {
                 <Route path="/resources/trust" element={<TrustPage />} />
                 <Route path="/company/executive-team" element={<ExecutiveTeamPage />} />
                 <Route path="/company/investor-relations" element={<InvestorRelationsPage />} />
+                <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </Suspense>
           </main>
           <Footer />
+          <CookieConsent />
         </div>
       </div>
     </Router>
   );
 }
+

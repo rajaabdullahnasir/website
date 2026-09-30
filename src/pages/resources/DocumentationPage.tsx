@@ -1,7 +1,12 @@
 import { BookOpen } from 'lucide-react';
 import SimplePage from '../SimplePage';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function DocumentationPage() {
+  useDocumentTitle(
+    'Product Documentation | iSeeWaves',
+    'Documentation for setting up, integrating, and operating the myESI platform.'
+  );
   return (
     <SimplePage
       eyebrow="Resources"
@@ -18,3 +23,4 @@ export default function DocumentationPage() {
     />
   );
 }
+

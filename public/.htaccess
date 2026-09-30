@@ -4,6 +4,17 @@
 # no real "about" file on the server - only index.html, which loads the app
 # that then reads the URL and shows the right page.
 
+# Force HTTPS. The X-Forwarded-Proto check avoids redirect loops on hosting
+# setups where Apache sits behind a proxy/load balancer that already
+# terminates TLS (in which case %{HTTPS} looks "off" even though the visitor
+# is on https://).
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -16,3 +27,4 @@
   # Otherwise, hand it to index.html and let React Router take over
   RewriteRule . /index.html [L]
 </IfModule>
+

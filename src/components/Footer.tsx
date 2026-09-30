@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
-            <img src="/images/iSeeWaves.png" alt="iSeeWaves" className="h-8 w-auto" />
+            <img src="/images/iSeeWaves.png" alt="iSeeWaves logo" className="h-8 w-auto" />
           </div>
           <p className="text-gray-600 max-w-md leading-relaxed mb-6">
             Makers of MyESI, an automated software supply chain security and DevSecOps platform.
@@ -141,3 +141,4 @@ export default function Footer() {
     </footer>
   );
 }
+

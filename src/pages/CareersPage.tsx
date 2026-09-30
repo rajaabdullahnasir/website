@@ -3,8 +3,13 @@ import { ArrowLeft, Send, Briefcase, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useSubmitForm } from '../hooks/useSubmitForm';
 import FormToast from '../components/FormToast';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 export default function CareersPage() {
+  useDocumentTitle(
+    'Careers | iSeeWaves',
+    'Explore open roles at iSeeWaves and apply to join our cybersecurity and AI team.'
+  );
   const { status, handleSubmit } = useSubmitForm({ subject: 'Career Application' });
 
   return (
@@ -35,6 +40,7 @@ export default function CareersPage() {
           className="glass-card p-8 md:p-12 rounded-3xl"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
+            <input type="text" name="website_hp" style={{ position: 'absolute', left: '-9999px', opacity: 0 }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
@@ -112,3 +118,4 @@ export default function CareersPage() {
     </div>
   );
 }
+

@@ -1,8 +1,13 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AboutContent from '../components/AboutContent';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 export default function AboutPage() {
+  useDocumentTitle(
+    'About Us | iSeeWaves',
+    'Learn about iSeeWaves, a Pakistani cybersecurity and AI company delivering enterprise-grade security solutions and the myESI platform.'
+  );
   return (
     <div className="pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
@@ -15,3 +20,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

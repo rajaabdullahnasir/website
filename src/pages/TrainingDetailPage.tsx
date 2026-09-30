@@ -4,12 +4,18 @@ import { Link, useParams, Navigate } from 'react-router-dom';
 import { getTrainingBySlug } from '../data/trainingData';
 import { useSubmitForm } from '../hooks/useSubmitForm';
 import FormToast from '../components/FormToast';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 export default function TrainingDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const training = slug ? getTrainingBySlug(slug) : undefined;
   const { status, handleSubmit } = useSubmitForm(
     training ? { subject: `Training Booking: ${training.title}`, training: training.title } : undefined
+  );
+
+  useDocumentTitle(
+    training ? `${training.title} | iSeeWaves` : 'Training | iSeeWaves',
+    training ? training.description : 'Explore iSeeWaves cybersecurity training programs.'
   );
 
   if (!training) {
@@ -65,6 +71,7 @@ export default function TrainingDetailPage() {
                 onSubmit={handleSubmit}
                 className="space-y-4"
               >
+                <input type="text" name="website_hp" style={{ position: 'absolute', left: '-9999px', opacity: 0 }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
                 <div>
                   <label className="block text-xs font-medium text-gray-600 mb-1.5">Full Name</label>
                   <input required name="name" type="text" className="w-full px-3 py-2.5 text-sm rounded-lg bg-white border border-gray-200 text-[#0B2545] focus:outline-none focus:border-teal-500" />
@@ -110,3 +117,4 @@ export default function TrainingDetailPage() {
     </div>
   );
 }
+

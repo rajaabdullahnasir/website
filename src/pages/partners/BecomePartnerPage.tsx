@@ -1,7 +1,12 @@
 import { Handshake } from 'lucide-react';
 import SimplePage from '../SimplePage';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function BecomePartnerPage() {
+  useDocumentTitle(
+    'Become a Partner | iSeeWaves',
+    'Join the iSeeWaves partner network and bring myESI software supply chain security to your customers.'
+  );
   return (
     <SimplePage
       eyebrow="Partners"
@@ -20,3 +25,4 @@ export default function BecomePartnerPage() {
     />
   );
 }
+
